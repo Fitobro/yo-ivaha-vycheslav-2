@@ -1,5 +1,5 @@
 <footer class="footer">
-    <div class="footer_colum container">
+    <div class="footer__colum container">
       <div class="navigation">
         <span>Navigation</span>
         <ul class="navigation_list undotted">
@@ -52,7 +52,13 @@
         <span>Connect</span>
         <form class="form_email">
           <input type="email" id="Email_input" placeholder="Email">
-          <button type="submit" class="button_primary">Join</button>
+
+          @@include('blocks\button.html', {
+            "type": "submit",
+            "link": "#",
+            "text": "Join",
+          })
+
         </form>
         <ul class="social undotted">
           <li>

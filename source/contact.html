@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    
+
     @@include('blocks/header.html')
 
     <main class="container">
@@ -54,7 +54,11 @@
                             personal data</label>
                     </fieldset>
 
-                    <button type="submit" class="button_primary">Submit</button>
+                    @@include('blocks\button.html', {
+                    "type": "submit",
+                    "link": "#",
+                    "text": "Submit",
+                    })
                 </form>
 
                 <div class="support">

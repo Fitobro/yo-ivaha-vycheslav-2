@@ -23,10 +23,10 @@
 
   <main class="container">
     <section class="banner">
-      <div class="banner_info">
-        <div class="banner_number">
+      <div class="banner__info">
+        <div class="banner__number">
           <h2>01</h2>
-          <ul class="banner_button undotted">
+          <ul class="banner__button undotted">
             <li>
               <button></button>
             </li>
@@ -41,9 +41,15 @@
             </li>
           </ul>
         </div>
-        <h1 class="banner_title uppercase">The ooh noo collection</h1>
+        <h1 class="banner__title uppercase">The ooh noo collection</h1>
         <p class="crimson400italic">Designed in Slovenia</p>
-        <button class="button_primary banner_js">Explore now</button>
+
+        @@include('blocks\button.html', {
+          "link": "#",
+          "text": "Explore now",
+          "class": "banner_js",
+        })
+
       </div>
       <img src="img/monstr.png" alt="" width="635" height="461">
       <div class="down_banner">
@@ -75,11 +81,11 @@
       </div>
     </section>
 
-    <section class="delivery_list">
+    <section class="delivery">
       <img src="img/deliveryphoto.jpg" alt="" width="480" height="559">
-      <div class="delivery_colum">
-        <h3 class="delivery_title">Delivery</h3>
-        <ul class="delivery_button undotted">
+      <div class="delivery__colum">
+        <h3 class="delivery__title">Delivery</h3>
+        <ul class="delivery__button undotted">
           <li>
             <a class="crimson700italic">Delivery</a>
           </li>
@@ -95,7 +101,12 @@
         <p>What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly
           happy
           place for me and i have you and all of the beautiful designers that we work with to thank!</p>
-        <a href="#" class="button_primary">Learn more</a>
+
+        @@include('blocks\button.html', {
+          "link": "#",
+          "text": "Learn more",
+        })
+        
       </div>
     </section>
 
@@ -123,10 +134,15 @@
         <span class="crimson400italic">About Us</span>
         <p>Some days i feel like i've been working on dlk my entire life and there are other days that
           i am completely shocked that four years have flown by. It's simply magical. </p>
-        <a href="#" class="button_primary">buy now</a>
+
+        @@include('blocks\button.html', {
+          "link": "#",
+          "text": "buy now",
+        })
+        
       </div>
       <div class="contacts">
-        <div class="contacts_list">
+        <div class="contacts__list">
           <h3 class="uppercase">Contacts</h3>
           <p>Some days i feel like i've been working on dlk my entire life and there are other days that
             i am completely shocked that four years have flown by. It's simply magical.</p>
@@ -138,40 +154,7 @@
     </section>
   </main>
 
-  <section class="popup">
-    <h2 class="hidden">Modal Block</h2>
-    <form action="#" class="form_contact_popup">
-      <div class="label_wrapper">
-        <label for="input_name">Name</label>
-        <input type="text" id="input_name" placeholder="Ivan Ivanov">
-      </div>
-      <div class="field_2_colum">
-        <div class="label_wrapper">
-          <label for="input_phone">Phone</label>
-          <input type="text" id="input_phone">
-        </div>
-        <div class="label_wrapper">
-          <label for="input_email">Email</label>
-          <input type="email" id="input_email">
-        </div>
-      </div>
-      <div class="label_wrapper">
-        <label for="input_massage">Message</label>
-        <textarea id="input_massage" cols="30" rows="10"></textarea>
-      </div>
-
-      <fieldset>
-        <input type="checkbox" id="input_personaldata" class="checkbox_input">
-        <label for="input_personaldata" class="checkbox_label">By clicking on the button, you consent to the
-          processing of your
-          personal data</label>
-      </fieldset>
-
-      <button type="submit" class="button_primary">Submit</button>
-
-      <button class="popup_close"><img src="img/close_white.svg" alt=""></button>
-    </form>
-  </section>
+  @@include('blocks\popup.html')
 
   @@include('blocks\footer.html')
 

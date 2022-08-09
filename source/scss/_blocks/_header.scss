@@ -1,38 +1,42 @@
 .header {
-    display: flex;
-    align-items: center;
-    margin: 33px auto;
+  display: flex;
+  align-items: center;
+  margin: 33px auto;
+
+  & a,
+  & img {
+    transition: .3s;
   }
-  
-  .header a:hover,
-  .header img:hover {
+
+
+  & a:hover,
+  & img:hover {
     opacity: .5;
   }
-  
-  .header a:active,
-  .header img:active {
+
+  & a:active,
+  & img:active {
     opacity: .3;
   }
-  
-  .header_menu {
+
+  &__menu {
     margin: 0px auto 0 60px;
   }
-  
-  
-  .header_list {
+
+  &__list {
     align-items: center;
     font-size: 14px;
     line-height: 19px;
     display: flex;
   }
-  
-  .header_list a {
+
+  &__list a {
     color: #1E0606;
     margin-right: 20px;
   }
-  
-  
-  .header button {
+
+  & button {
     margin-right: 19px;
     background: #FFFFFF;
   }
+}
